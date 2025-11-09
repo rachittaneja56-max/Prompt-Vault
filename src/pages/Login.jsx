@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import logo from "../assets/logo.png"
 
 
 
@@ -20,7 +21,7 @@ function LoginPage() {
     return (
         <div className="flex justify-center items-center min-h-screen bg-slate-900">
             <div className="bg-slate-800 p-8 rounded-2xl shadow-lg w-[350px]">
-                <div className="flex flex-row gap-4 text-3xl font-bold text-white  mb-2"><img className='size-10' src='src/assets/logo.png' /> Prompt Vault</div>
+                <div className="flex flex-row gap-4 text-3xl font-bold text-white  mb-2"><img className='size-10' src={logo} /> Prompt Vault</div>
                 <div className="text-sm text-gray-400 text-center mb-6">Your Personal AI Prompt Library</div>
                 <form  className='flex flex-col space-y-4' onSubmit={handleSubmit}>
                     <input
