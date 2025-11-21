@@ -13,6 +13,7 @@ function LoginPage() {
     const navigate = useNavigate(); 
     const handleSubmit =(e)=>{
        e.preventDefault()
+       if(!email) return true
        const success = login(email,password)  // login returns true/false
        if(success) navigate("/dashboard")
     }
